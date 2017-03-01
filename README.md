@@ -15,6 +15,8 @@
 ### 使用方式
 
 ```
+npm install --save atcon
+const atcon = require('atcon');
 atcon(conditions, states, predicate);
 ```
 
