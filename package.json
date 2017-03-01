@@ -1,0 +1,34 @@
+{
+  "name": "atcon",
+  "version": "1.0.0",
+  "description": "atom conditions",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src/atcon.js -o index.js",
+    "prepublish": "npm run compile"
+  },
+  "keywords": [
+    "atcon",
+    "atom",
+    "conditions"
+  ],
+  "author": "Xaber",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "6.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xaber20110202/atcon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Xaber20110202/atcon/issues"
+  },
+  "homepage": "https://github.com/Xaber20110202/atcon#readme"
+}
