@@ -75,7 +75,7 @@ atcon(noticeMap, ['a', 6, 1, 5, 6], isString); // 'textaaa'
 ```
 atcon(noticeMap, ['b'], isString); // undefined
 ```
-返回的是 `undefined`，因为我认为，已经走进了 `switch case b`的逻辑，不应该走到同层的`default`，如果这两个分支返回的结果一样，那就不需要 `b`这个分支了。同理，`if else`也是互斥的存在。
+返回的是 `undefined`，因为走进了 `switch case b`的逻辑，但是`switch case b`是一个对象，没有满足isString的条件，而这里没有指定下一层状态的话，循环就会在这一层戛然而止，而不再做回溯。
 
 更多例子可直接参考[mocha test](https://github.com/Xaber20110202/atcon/blob/master/test.js)
 
