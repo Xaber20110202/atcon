@@ -5,21 +5,22 @@ Object.defineProperty(exports, "__esModule", {
 });
 var atcon = function () {
 
+    var breaker = {};
     var isUndefined = function isUndefined(obj) {
         return obj === void 0;
     };
 
     // iterator can receive breaker to return and then this reduce will be breaked
     // and it also receive values, for the situation that we need look back upon
-    // inspired by Underscore.js 1.6.0
     var reduce = function reduce(array, iterator, initialValue) {
-        var breaker = {};
         var value = initialValue;
         // upper levels
         var values = [];
 
         array.some(function (v) {
             values.push(value);
+
+            // inspired by Underscore.js 1.6.0
             value = iterator(value, v, breaker, values);
             if (value === breaker) {
                 return true;

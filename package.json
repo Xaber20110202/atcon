@@ -1,6 +1,6 @@
 {
   "name": "atcon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "atom conditions",
   "main": "index.js",
   "scripts": {

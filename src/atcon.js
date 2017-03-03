@@ -1,18 +1,19 @@
 const atcon = (() => {
 
+    const breaker = {};
     const isUndefined = obj => obj === void 0;
 
     // iterator can receive breaker to return and then this reduce will be breaked
     // and it also receive values, for the situation that we need look back upon
-    // inspired by Underscore.js 1.6.0
     const reduce = (array, iterator, initialValue) => {
-        const breaker = {};
         let value = initialValue;
         // upper levels
         let values = [];
 
         array.some((v) => {
             values.push(value);
+
+            // inspired by Underscore.js 1.6.0
             value = iterator(value, v, breaker, values);
             if (value === breaker) {
                 return true;
