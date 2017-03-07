@@ -81,3 +81,7 @@ atcon(noticeMap, ['b'], isString); // undefined
 
 ### 最后
 希望大家用得开心。
+
+### License
+
+  MIT
